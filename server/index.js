@@ -1,6 +1,6 @@
 const express = require("express"); //express모듈을 요청한다
 const app = express(); //express 함수 생성
-const port = 3000; //포트 3000번 생성
+const port = 5000; //포트 5000번 생성
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const { User } = require("./models/User");
@@ -29,6 +29,10 @@ app.get("/", (req, res) => {
   //GET 방식
   res.send("Hello World! 안녕방구야 ㅋㅋㅋ");
 }); // '/'루트 디렉터리에 접근하면 hello world가 나오도록 한다
+
+app.get("/api/hello", (req, res) => {
+  res.send("테스트 입니다.");
+});
 
 app.post("/api/users/register", (req, res) => {
   //POST 방식

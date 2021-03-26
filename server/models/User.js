@@ -58,6 +58,7 @@ userSchema.pre("save", function (next) {
   //비밀번호를 암호화 시킨다.
   //save라는 메소드를 실행하기 전에 실행하는 함수.
   //pre()는 몽고디비에 있는 메소드이다.
+  //next()는 index 파일의 user.save 부분이다.
 });
 
 userSchema.methods.comparePassword = function (plainPassword, cb) {
